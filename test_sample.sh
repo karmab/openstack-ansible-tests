@@ -1,0 +1,10 @@
+ansible-playbook -i ~/klist.py test_keystone.yml  --tags=keystone
+ansible-playbook -i ~/klist.py test_glance.yml  --tags=glance
+ansible-playbook -i ~/klist.py test_cinder.yml  --tags=cinder
+ansible-playbook -i ~/klist.py test_cinder_volume.yml  --tags=cinder_volume
+ansible-playbook -i ~/klist.py test_neutron.yml  --tags=neutron
+ansible-playbook -i ~/klist.py test_nova.yml  --tags=nova
+ansible-playbook -i ~/klist.py test_nova.yml  --tags=nova_compute
+ansible-playbook -i ~/klist.py test_heat.yml  --tags=heat
+ansible-playbook -i ~/klist.py test_ceilometer.yml  --tags=ceilometer
+ansible-playbook -i ~/klist.py test_horizon.yml  --tags=horizon

@@ -1,0 +1,14 @@
+---
+
+- name: Set Test Variables
+  set_fact:
+    group: "ceilometer"
+    host: "{{ ceilometer_host }}"
+    ports: 
+     - 8777
+    packages: "{{ ceilometer_packages }}"
+    services: "{{ ceilometer_services }}"
+    configuration_files:
+     - '/etc/ceilometer/ceilometer.conf'
+
+- include: common.yml
