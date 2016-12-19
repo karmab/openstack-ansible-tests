@@ -2,11 +2,10 @@
 
 - name: Set Test Variables
   set_fact:
-    group: nova
+    group: "nova_compute"
+    host: "127.0.0.1"
     packages: "{{ nova_compute_packages }}"
-    services:
-     - 'openstack-nova-compute'
-    configuration_files:
-     - '/etc/nova/nova.conf'
+    services: "{{ nova_compute_services }}"
+    configuration_files: "{{ configuration_files_checked }}"
 
 - include: common.yml

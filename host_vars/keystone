@@ -1,0 +1,27 @@
+keystone_packages:
+  - openstack-keystone
+  - openstack-selinux
+  - openstack-utils
+  - httpd
+  - mod_wsgi
+  - python-openstackclient
+
+memcached_packages:
+  - memcached
+  - python-memcached
+
+configuration_files_checked:
+  - /etc/keystone/keystone.conf
+
+keystone_services:
+  - memcached
+  - httpd
+  - openstack-keystone
+
+keystone_ports:
+  - 35357
+  - 5000
+
+search_strings:
+  - connection = mysql://
+  - debug = (True|False)

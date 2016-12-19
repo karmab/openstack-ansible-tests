@@ -1,0 +1,15 @@
+mysql_packages:
+  - mariadb-galera-server
+  - MySQL-python
+
+configuration_files_checked:
+  - /etc/my.conf
+
+mysql_services:
+  - mariadb
+
+mysql_ports:
+  - 3306
+
+search_strings:
+  - datadir=

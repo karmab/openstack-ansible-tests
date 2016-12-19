@@ -1,7 +1,7 @@
 ---
 - name: Test 
   hosts:
-   - cinder_volume
+   - cinder
   remote_user: cloud-user
   gather_facts: true
   become: yes

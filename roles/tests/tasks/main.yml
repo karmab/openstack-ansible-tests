@@ -21,7 +21,7 @@
    - cinder
 - include: cinder_volume.yml
   tags:
-   - cinder_volume
+   - volume
 - include: neutron.yml
   tags:
    - neutron
@@ -40,12 +40,3 @@
 - include: horizon.yml
   tags:
    - horizon
-- include: swift.yml
-  tags:
-   - swift
-- include: swift_storage.yml
-  tags:
-   - swift_storage
-- include: designate.yml
-  tags:
-   - designate

@@ -1,0 +1,19 @@
+horizon_packages:
+  - httpd
+  - mod_ssl
+  - memcached
+  - openstack-dashboard
+  - python-django-pyscss
+
+configuration_files_checked:
+  - /etc/openstack-dashboard/local_settings
+  - /etc/httpd/conf.d/openstack-dashboard.conf
+
+horizon_services:
+  - httpd
+
+horizon_ports:
+  - 80
+
+search_strings:
+  - k

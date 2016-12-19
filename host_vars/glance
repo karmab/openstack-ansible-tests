@@ -1,0 +1,18 @@
+glance_packages:
+  - openstack-glance
+  - openstack-selinux
+
+configuration_files_checked:
+  - /etc/glance/glance-api.conf
+  - /etc/glance/glance-registry.conf
+
+glance_services:
+  - openstack-glance-api
+  - openstack-glance-registry
+
+glance_ports:
+  - 9292
+
+search_strings:
+  - connection = mysql://
+  - debug = True

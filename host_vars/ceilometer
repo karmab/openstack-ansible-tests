@@ -1,0 +1,27 @@
+ceilometer_packages:
+  - openstack-ceilometer-api
+  - openstack-ceilometer-central
+  - openstack-ceilometer-collector
+  - openstack-ceilometer-common
+  - openstack-ceilometer-compute
+  - openstack-ceilometer-alarm
+  - openstack-ceilometer-notification
+
+configuration_files_checked:
+  - /etc/ceilometer/ceilometer.conf
+
+ceilometer_services:
+  - openstack-ceilometer-api
+  - openstack-ceilometer-collector
+  - openstack-ceilometer-central
+  - openstack-ceilometer-notification
+  - openstack-ceilometer-alarm-evaluator
+  - openstack-ceilometer-alarm-notifier
+  - openstack-ceilometer-notification
+
+ceilometer_ports:
+  - 8777
+
+search_strings:
+  - connection = mongodb://
+  - debug = True

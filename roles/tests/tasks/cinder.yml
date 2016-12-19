@@ -2,13 +2,11 @@
 
 - name: Set Test Variables
   set_fact:
-    group: cinder
-    host: "{{ cinder_host }}"
-    ports: 
-     - 8776
+    group: "cinder"
+    host: "127.0.0.1"
+    ports: "{{ cinder_ports }}"
     packages: "{{ cinder_packages }}"
     services: "{{ cinder_services }}"
-    configuration_files:
-     - '/etc/cinder/cinder.conf'
+    configuration_files: "{{ configuration_files_checked }}"
 
 - include: common.yml

@@ -2,13 +2,11 @@
 
 - name: Set Test Variables
   set_fact:
-    host: "{{ mongodb_host }}"
-    ports: 
-     - 27017
+    group: "mongodb"
+    host: "127.0.0.1"
+    ports: "{{ mongodb_ports }}"
     packages: "{{ mongodb_packages }}"
-    services:
-     - '{{ mongodb_service }}'
-    configuration_files:
-     - '/etc/mongod.conf'
+    services: "{{ mongodb_services }}"
+    configuration_files: "{{ configuration_files_checked }}"
 
 - include: common.yml

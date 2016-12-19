@@ -2,13 +2,11 @@
 
 - name: Set Test Variables
   set_fact:
-    host: "{{ redis_host }}"
-    ports: 
-     - 6379
+    group: "redis"
+    host: "127.0.0.1"
+    ports: "{{ redis_ports }}"
     packages: "{{ redis_packages }}"
-    services:
-     - "{{ redis_service }}"
-    configuration_files:
-     - '/etc/redis.conf'
+    services: "{{ redis_services }}"
+    configuration_files: "{{ configuration_files_checked }}"
 
 - include: common.yml

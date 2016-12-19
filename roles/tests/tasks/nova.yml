@@ -2,13 +2,11 @@
 
 - name: Set Test Variables
   set_fact:
-    group: nova
-    host: "{{ nova_host }}"
-    ports: 
-     - 8774
+    group: "nova"
+    host: "127.0.0.1"
+    ports: "{{ nova_ports }}"
     packages: "{{ nova_packages }}"
     services: "{{ nova_services }}"
-    configuration_files:
-     - '/etc/nova/nova.conf'
+    configuration_files: "{{ configuration_files_checked }}"
 
 - include: common.yml

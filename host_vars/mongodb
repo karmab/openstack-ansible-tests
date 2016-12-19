@@ -1,0 +1,17 @@
+mongodb_packages:
+  - mongodb-server
+  - python-pymongo
+  - mongodb
+
+configuration_files_checked:
+  - /etc/mongod.conf
+
+mongodb_services:
+  - mongod
+
+mongodb_ports:
+  - 27017
+
+search_strings:
+  - bind_ip = 
+  - port = 27017

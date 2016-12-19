@@ -1,0 +1,38 @@
+nova_packages:
+  - openstack-nova-api
+  - openstack-nova-conductor
+  - openstack-nova-scheduler
+  - openstack-nova-novncproxy
+  - openstack-nova-console
+
+configuration_files_checked:
+  - /etc/nova/nova.conf
+
+nova_services:
+  - openstack-nova-api
+  - openstack-nova-conductor
+  - openstack-nova-scheduler
+  - openstack-nova-novncproxy
+  - openstack-nova-consoleauth
+  - openstack-nova-console
+
+nova_ports:
+  - 8774
+
+nova_compute_packages:
+  - libvirt-daemon
+  - openstack-nova-compute
+  - openstack-selinux
+  - python-novaclient
+  - python-neutronclient
+
+configuration_files_checked:
+  - /etc/nova/nova.conf
+
+nova_compute_services:
+  - openstack-nova_compute
+
+search_strings:
+  - connection = mysql://
+  - debug = True
+  - virt_type

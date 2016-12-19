@@ -1,0 +1,14 @@
+redis_packages:
+  - redis
+
+configuration_files_checked:
+  - /etc/redis.conf
+
+redis_services:
+  - redis
+
+redis_ports:
+  - 6379
+
+search_strings:
+  - a

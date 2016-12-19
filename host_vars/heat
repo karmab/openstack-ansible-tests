@@ -1,0 +1,25 @@
+heat_packages:
+  - openstack-heat-api
+  - openstack-heat-api-cfn
+  - openstack-heat-common
+  - openstack-heat-engine
+  - openstack-heat-api-cloudwatch
+  - heat-cfntools
+  - python-keystonemiddleware
+
+configuration_files_checked:
+  - /etc/heat/heat.conf
+
+heat_services:
+  - openstack-heat-api
+  - openstack-heat-api-cfn
+  - openstack-heat-api-cloudwatch
+  - openstack-heat-engine
+
+heat_ports:
+  - 8000
+  - 8004
+
+search_strings:
+  - connection = mysql://
+  - debug = True

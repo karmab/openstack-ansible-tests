@@ -2,14 +2,11 @@
 
 - name: Set Test Variables
   set_fact:
-    group: heat
-    host: "{{ heat_host }}"
-    ports: 
-     - 8000
-     - 8004
+    group: "heat"
+    host: "127.0.0.1"
+    ports: "{{ heat_ports }}"
     packages: "{{ heat_packages }}"
     services: "{{ heat_services }}"
-    configuration_files:
-     - '/etc/heat/heat.conf'
+    configuration_files: "{{ configuration_files_checked }}"
 
 - include: common.yml

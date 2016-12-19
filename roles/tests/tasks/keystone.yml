@@ -1,27 +1,13 @@
 ---
 
-- name: Set Keystone Service
-  set_fact: 
-    service: "{{ keystone_service }}"
-  when: version == 'kilo'
-
-- name: Set Keystone Service
-  set_fact: 
-    service: "{{ apache_service }}"
-  when: version != 'kilo'
-
-
 - name: Set Test Variables
   set_fact:
     group: "keystone"
-    host: "{{ keystone_host }}"
-    ports: 
-     - 5000
-     - 35357
-    packages: "{{ keystone_packages }}"
-    services:
-     - "{{ service }}"
-    configuration_files:
-     - '/etc/keystone/keystone.conf'
+    host: "127.0.0.1"
+    ports: "{{ keystone_ports }}"
+    packages: "{{ keystone_packages | union(memcached_packages) }}"
+    services: "{{ keystone_services }}"
+    configuration_files: "{{ configuration_files_checked }}"
+    search_strings: "{{ search_strings }}"
 
 - include: common.yml

@@ -2,11 +2,10 @@
 
 - name: Set Test Variables
   set_fact:
-    group: cinder
-    packages: "{{ cinder_packages }}"
-    services: 
-     - "{{ cinder_volume_service }}"
-    configuration_files:
-     - '/etc/cinder/cinder.conf'
+    group: "cinder"
+    host: "127.0.0.1"
+    packages: "{{ cinder_volume_packages }}"
+    services: "{{ cinder_volume_services }}"
+    configuration_files: "{{ configuration_files_checked }}"
 
 - include: common.yml

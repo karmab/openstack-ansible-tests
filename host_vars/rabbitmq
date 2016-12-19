@@ -1,0 +1,14 @@
+rabbitmq_packages:
+  - rabbitmq-server
+
+configuration_files_checked:
+  - /etc/rabbitmq/rabbitmq.config
+
+rabbitmq_services:
+  - rabbitmq-server
+
+rabbitmq_ports:
+  - 5672
+
+search_strings:
+  - rabbit

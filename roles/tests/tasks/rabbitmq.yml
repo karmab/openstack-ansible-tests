@@ -2,13 +2,11 @@
 
 - name: Set Test Variables
   set_fact:
-    host: "{{ rabbitmq_host }}"
-    ports: 
-     - 25672
+    group: "rabbitmq"
+    host: "127.0.0.1"
+    ports: "{{ rabbitmq_ports }}"
     packages: "{{ rabbitmq_packages }}"
-    services:
-     - '{{ rabbitmq_service }}'
-    configuration_files:
-     - '/etc/rabbitmq/rabbitmq.config'
+    services: "{{ rabbitmq_services }}"
+    configuration_files: "{{ configuration_files_checked }}"
 
 - include: common.yml

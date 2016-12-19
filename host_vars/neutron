@@ -1,0 +1,18 @@
+neutron_packages:
+  - openvswitch
+  - openstack-neutron
+  - openstack-neutron-ml2
+  - openstack-neutron-openvswitch
+
+configuration_files_checked:
+  - /etc/neutron/neutron.conf
+
+neutron_services:
+  - neutron-server
+
+neutron_ports:
+  - 9696
+
+search_strings:
+  - connection = mysql://
+  - debug = True

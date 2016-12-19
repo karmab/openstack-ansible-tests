@@ -2,13 +2,11 @@
 
 - name: Set Test Variables
   set_fact:
-    group: httpd
-    host: "{{ horizon_host }}"
-    ports: 
-     - 80
+    group: "apache"
+    host: "127.0.0.1"
+    ports: "{{ horizon_ports }}"
     packages: "{{ horizon_packages }}"
-    services: "{{ apache_service }}"
-    configuration_files:
-     - '/etc/openstack-dashboard/local_settings'
+    services: "{{ horizon_services }}"
+    configuration_files: "{{ configuration_files_checked }}"
 
 - include: common.yml

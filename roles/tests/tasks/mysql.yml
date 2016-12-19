@@ -2,13 +2,11 @@
 
 - name: Set Test Variables
   set_fact:
-    host: "{{ mysql_host }}"
-    ports: 
-     - 3306
+    group: "mysql"
+    host: "127.0.0.1"
+    ports: "{{ mysql_ports }}"
     packages: "{{ mysql_packages }}"
-    services:
-     - "{{ mysql_service }}"
-    configuration_files:
-     - '/etc/my.cnf'
+    services: "{{ mysql_services }}"
+    configuration_files: "{{ configuration_files_checked }}"
 
 - include: common.yml

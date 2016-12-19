@@ -1,0 +1,26 @@
+cinder_packages:
+  - openstack-cinder
+  - device-mapper-multipath
+  - openstack-selinux
+
+configuration_files_checked:
+  - /etc/cinder/cinder.conf
+
+cinder_services:
+  - openstack-cinder-api
+  - openstack-cinder-scheduler
+
+cinder_ports:
+  - 8776
+
+cinder_volume_packages:
+  - openstack-cinder
+  - device-mapper-multipath
+  - openstack-selinux
+
+cinder_volume_services:
+  - openstack-cinder-volume
+
+search_strings:
+  - connection = mysql://
+  - debug = True
